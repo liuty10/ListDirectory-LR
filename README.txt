@@ -33,7 +33,7 @@ LR (List Directory) is a linux tool and it records your frequently used director
    $ lr -d 1
 
 
-You can find your directories in file: ~/.lr/history_dir
+You can find your directories in file: ~/.lr_data/history_dir
 
 3. How to uninstall?
      $ sudo ./install del
