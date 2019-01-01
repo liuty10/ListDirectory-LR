@@ -10,7 +10,9 @@ LR (List Directory) is a linux tool and it records your frequently used director
     $ lr -h
     $ lr -v
     $ lr -V
-
+   If it doesn't work, try to source .bashrc:
+    $ source ~/.bashrc
+    
 2. How to use it?
 
 1) Add your directories:
