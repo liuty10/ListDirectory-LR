@@ -31,3 +31,4 @@ LR (List Directory) is a linux tool. It saves your frequently used directories i
    $ lr -d 1
 
 
+You can find your directories in file: ~/.lr/history_dir
