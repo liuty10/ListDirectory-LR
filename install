@@ -18,10 +18,12 @@ setup()
         then
 	    cp -f ./package/lr $bin_dir/
 	    cp -f ./package/lr.sh $prof_dir/
-            cp -f ./package/history_dir $lr_dir/
-            chmod 666 $lr_dir/history_dir
+            # cp -f ./package/history_dir $lr_dir/
+            touch $lr_dir/tmpd
             mkdir $lr_dir/tmp
             touch $lr_dir/tmp/lr_tmp
+            # chmod 666 $lr_dir/history_dir
+            chmod 666 $lr_dir/tmpd
             chmod 666 $lr_dir/tmp/lr_tmp
 	    echo "install lr OK, but do not overwrite it!"
 	    echo "version is 1.00"
@@ -37,10 +39,12 @@ setup()
     fi
     cp -f ./package/lr $bin_dir/
     cp -f ./package/lr.sh $prof_dir/
-    cp -f ./package/history_dir $lr_dir/
+    # cp -f ./package/history_dir $lr_dir/
+    touch $lr_dir/tmpd
     mkdir $lr_dir/tmp
     touch $lr_dir/tmp/lr_tmp
-    chmod 666 $lr_dir/history_dir
+    # chmod 666 $lr_dir/history_dir
+    chmod 666 $lr_dir/tmpd
     chmod 666 $lr_dir/tmp/lr_tmp
     echo ". /etc/profile.d/lr.sh" >> ~/.bashrc
     source ~/.bashrc

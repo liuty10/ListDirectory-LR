@@ -4,7 +4,7 @@
 #Writen by xiewei 2004. 
 #Re-implemented by lty 2018. 
 
-setup_content=~/.lr
+setup_content=~/.lr_data
 history_dir=$setup_content/history_dir
 
 usage()
@@ -29,12 +29,12 @@ handle()
 {
     enter_dir=""
     line_num=`wc -l $history_dir | awk '{print $1}'`
-    tmp=$setup_content/tmp
+    tmp=$setup_content/tmpd
     #*****************************************************************************    
     if [ "$1" = "-d" ]
     then
-        #expr $2 "+" 10 > /dev/null
-    	#[ ! "$?" -gt 0 ] || ! echo "Please input a number" || exit 0
+        expr $2 "+" 10 > /dev/null
+    	[ ! "$?" -gt 0 ] || ! echo "Please input a number" || exit 0
         pos=$2
 	[ ! $pos -gt $line_num ] || ! echo "$h_history_dir only has $line_num  pathes" || exit 0 
         > $tmp
@@ -52,7 +52,8 @@ handle()
 	        fi
             fi
 	done
-
+        #rm $history_dir
+        #cp $tmp $history_dir
 	mv $tmp $history_dir
         exit 0
     fi
@@ -84,6 +85,10 @@ handle()
     
 }
 #*****************************************************************************        
+
+[ -e $setup_content ] || mkdir $setup_content
+
+[ -e $history_dir ] || touch $history_dir
 
 [ ! $# -eq 0  ] || ! cat  $history_dir || exit 0
 
