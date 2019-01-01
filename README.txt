@@ -14,6 +14,8 @@ LR (List Directory) is a linux tool. It saves your frequently used directories i
 2. How to use it?
 
 1) Add your directories:
+   $ lr -a ./
+   $ lr -a .
    $ lr -a /home
    $ lr -a /home/$USER
    $ lr -a /home/$USER/Documents
