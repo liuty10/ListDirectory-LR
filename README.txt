@@ -1,5 +1,5 @@
 # ListDirectory-LR
-LR (List Directory) is a linux tool. It saves your frequently used directories in Linux. With LR, you can enter long path much easier. I have reimplemented LR from qcd.
+LR (List Directory) is a linux tool and it records your frequently used directories under Linux enviroment. With LR, you can enter long Directories much easier.
 
 1. How to install?
     $ git clone https://github.com/liuty10/ListDirectory-LR.git ./lr
