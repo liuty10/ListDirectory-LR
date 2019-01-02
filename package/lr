@@ -105,16 +105,7 @@ case $1 in
     [ $2 ] || usage
     handle $1 $2
     ;;
--?)
-    usage
-    ;;
--h)
-    usage
-    ;;
--v)
-    usage
-    ;;
--V)
+--help | --version | -? | -h | -v | -V)
     usage
     ;;
 *) 
