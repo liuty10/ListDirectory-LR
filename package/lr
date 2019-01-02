@@ -52,8 +52,6 @@ handle()
 	        fi
             fi
 	done
-        #rm $history_dir
-        #cp $tmp $history_dir
 	mv $tmp $history_dir
         exit 0
     fi
@@ -66,6 +64,7 @@ handle()
 
 	pos=`expr $line_num + 1`
 	echo "$pos  $enter_dir" >> $history_dir
+        echo "" > $LRDIR
 	exit 0
     fi
     #****************************************************************************
