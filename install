@@ -3,9 +3,8 @@
 #written by xiewei 2004 
 #Re-implemented by lty 2018
 
-lr_dir=~/.lr
-bin_dir=$lr_dir
-#bin_dir=/usr/local/sbin
+lr_dir=~/.lr_data
+bin_dir=/etc/lr
 prof_dir=/etc/profile.d
 
 setup()
@@ -16,13 +15,9 @@ setup()
  	read choice
         if [ $choice = "n" -o $choice = "N" ]
         then
+            mkdir $bin_dir
 	    cp -f ./package/lr $bin_dir/
 	    cp -f ./package/lr.sh $prof_dir/
-            #touch $lr_dir/tmpd
-            mkdir $lr_dir/tmp
-            touch $lr_dir/tmp/lr_tmp
-            #chmod 666 $lr_dir/tmpd
-            chmod 666 $lr_dir/tmp/lr_tmp
 	    echo "install lr OK, but do not overwrite it!"
 	    echo "version is 1.00"
             echo ". /etc/profile.d/lr.sh" >> ~/.bashrc
@@ -31,17 +26,9 @@ setup()
         fi
     fi
 
-    if [ ! -e $lr_dir ]
-    then
-	mkdir $lr_dir
-    fi
+    mkdir $bin_dir
     cp -f ./package/lr $bin_dir/
     cp -f ./package/lr.sh $prof_dir/
-    #touch $lr_dir/tmpd
-    mkdir $lr_dir/tmp
-    touch $lr_dir/tmp/lr_tmp
-    #chmod 666 $lr_dir/tmpd
-    chmod 666 $lr_dir/tmp/lr_tmp
     echo ". /etc/profile.d/lr.sh" >> ~/.bashrc
     source ~/.bashrc
 }
@@ -56,8 +43,7 @@ delete()
 	exit 0
     fi
 
-    rm -f  $bin_dir/lr
-    rm -rf $lr_dir
+    rm -rf $bin_dir
     rm -f  $prof_dir/lr.sh
 }
 

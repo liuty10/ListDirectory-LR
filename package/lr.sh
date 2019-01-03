@@ -1,7 +1,7 @@
 lr() {
-	LRDIR=~/.lr/tmp/lr_tmp
+	LRDIR=~/.lr_data/cdpath
 	export LRDIR
-	~/.lr/lr "$@"
+	/etc/lr/lr "$@"
 	[ ! `cat $LRDIR` ] || cd "`cat $LRDIR`"
         unset LRDIR;
 }

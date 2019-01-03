@@ -4,8 +4,8 @@
 #Writen by xiewei 2004. 
 #Re-implemented by lty 2018. 
 
-setup_content=~/.lr_data
-history_dir=$setup_content/history_dir
+lr_dir=~/.lr_data
+history_dir=$lr_dir/history_dir
 
 usage()
 {
@@ -29,7 +29,7 @@ handle()
 {
     enter_dir=""
     line_num=`wc -l $history_dir | awk '{print $1}'`
-    tmp=$setup_content/tmpd
+    tmp=$lr_dir/tmpd
     #*****************************************************************************    
     if [ "$1" = "-d" ]
     then
@@ -84,8 +84,9 @@ handle()
     
 }
 #*****************************************************************************        
+[ -e $lr_dir ] || mkdir $lr_dir
 
-[ -e $setup_content ] || mkdir $setup_content
+[ -e $lr_dir/cdpath ] || touch $lr_dir/cdpath
 
 [ -e $history_dir ] || touch $history_dir
 

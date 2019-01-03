@@ -11,6 +11,7 @@ LR (List Directory) is a linux tool and it records your frequently used director
     $ lr -v
     $ lr -V
    If it doesn't work, try to source .bashrc:
+    $ echo ". /etc/profile.d/lr.sh" >> ~/.bashrc
     $ source ~/.bashrc
     
 2. How to use it?
@@ -32,8 +33,11 @@ LR (List Directory) is a linux tool and it records your frequently used director
    $ lr -d 2
    $ lr -d 1
 
-
 You can find your directories in file: ~/.lr_data/history_dir
+
+4. You only install onece, and all the users can use this tool. If not, run the following command,
+   $ echo ". /etc/profile.d/lr.sh" >> ~/.bashrc
+   $ source ~/.bashrc
 
 3. How to uninstall?
      $ sudo ./install del
