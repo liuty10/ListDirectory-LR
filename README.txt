@@ -11,7 +11,6 @@ LR (List Directory) is a linux tool and it records your frequently used director
     $ lr -v
     $ lr -V
    If it doesn't work, try to source .bashrc:
-    $ echo ". /etc/profile.d/lr.sh" >> ~/.bashrc
     $ source ~/.bashrc
     
 2. How to use it?
