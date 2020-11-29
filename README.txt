@@ -5,6 +5,7 @@ LR (List Directory) is a linux tool and it records your frequently used director
     $ git clone https://github.com/liuty10/ListDirectory-LR.git ./lr
     $ cd lr
     $ sudo ./install
+    $ source ~/.bashrc
    Now, you can use it. Try LR:
     $ lr -?
     $ lr -h
